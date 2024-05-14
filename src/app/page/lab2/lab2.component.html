@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="row mb-2">
+            <label class="col-1">Filter:</label>
+            <input type="text" class="col-2" [(ngModel)]='filterValue' (input)='filter()'>
+            <div class="col-7"></div>
+            </div>
+      <h3 class="text-center m-auto mb-2 mt-5">List Products - KSBoy!!!</h3>
+      <table class="table table-bordered border-primary ">
+        <thead>
+          <tr class="">  
+            <th scope="col">image</th>
+            <th scope="col">Product name</th>
+            <th scope="col">Code</th>
+            <th scope="col">Release date</th>
+            <th scope="col">Price</th>
+            <th scope="col">Star</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pro of ProductList">
+            <th  class=""><img src="{{pro.imageUrl}}" width="50px"></th>
+            <td class="table-danger">{{ pro.productName }}</td>
+            <td  class="table-danger">{{ pro.productCode }}</td>
+            <td  class="table-danger">{{ pro.releaseDate }}</td>
+            <td  class="table-danger">{{ pro.price }}</td>
+            <td scope="row">{{pro.starRating}}
+                <div class="crop" style="height: 20px;" [style.width.px]="pro.starRating*80/5">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<router-outlet></router-outlet>
