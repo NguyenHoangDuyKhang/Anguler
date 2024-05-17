@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+          <dailog [name]="name" class="text-danger"></dailog>
+          <p #pRef class="text-danger"></p>
+          <h3 class="text-center m-auto mb-2 mt-5 text-danger">List Products - KSBoy!!!</h3>
+          <table class="table table-bordered border-primary ">
+            <thead>
+              <tr class="">  
+                <th scope="col">image</th>
+                <th scope="col">Product name</th>
+                <th scope="col">Code</th>
+                <th scope="col">Release date</th>
+                <th scope="col">Price</th>
+                <th scope="col">Star</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pro of ProductList">
+                <th  class=""><img src="{{pro.imageUrl}}" width="50px"></th>
+                <td class="table-danger">{{ pro.productName }}</td>
+                <td  class="table-danger">{{ pro.productCode }}</td>
+                <td  class="table-danger">{{ pro.releaseDate }}</td>
+                <td  class="table-danger">{{ pro.price }}</td>
+                
+                <td scope="row">
+                   <app-star [rating]="pro.starRating"></app-star>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    <router-outlet></router-outlet>
+</div>
+
+<script>
+  
+</script>
