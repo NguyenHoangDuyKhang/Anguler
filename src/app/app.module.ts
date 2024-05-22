@@ -5,7 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './page/products/products.component';
 import { StarComponent } from './page/star/star.component';
-import {DialogComponent} from './page/products/dialog.component';
+import { DialogComponent } from './page/products/dialog.component';
+import { ProductsDetailComponent } from './page/products/products-detail/products-detail.component';
+import { HeaderComponent } from './page/header/header.component';
+import { HomeComponent } from './page/home/home.component';
 
 
 @NgModule({
@@ -13,7 +16,10 @@ import {DialogComponent} from './page/products/dialog.component';
     AppComponent,
     ProductsComponent,
     StarComponent,
-    DialogComponent
+    DialogComponent,
+    ProductsDetailComponent,
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

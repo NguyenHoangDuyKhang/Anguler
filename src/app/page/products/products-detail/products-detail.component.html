@@ -1,0 +1,16 @@
+  <div class="container mt-5">
+    <div class="row d-flex justify-content-center">
+        <div class="card " style="width: 18rem;">
+            <img src="{{result.imageUrl}}" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Name: {{result.productName}}</h5>
+              <span class="card-text">Code: {{result.productCode}}</span>
+              <span class="card-text">Description: {{result.description}}</span><br/>
+              <span class="card-text">ReleaseDate: {{result.releaseDate}}</span><br/>
+              <span class="card-text">Price: {{result.price}}</span><br/>
+              <span class="card-text start">Star Rating: <app-star [rating]="result.starRating"></app-star></span>
+              <a routerLink="/products" class="btn btn-primary">Back</a>
+            </div>
+          </div>
+    </div>
+  </div>

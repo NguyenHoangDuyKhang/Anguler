@@ -11,6 +11,8 @@ export class ProductsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    localStorage.setItem("data", JSON.stringify(this.ProductList))
   }
 
   name = 'Khang nè';

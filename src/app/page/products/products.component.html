@@ -1,8 +1,8 @@
 <div class="container-fluid">
     <div class="container">
         <div class="row">
-          <dailog [name]="name" class="text-danger"></dailog>
-          <p #pRef class="text-danger"></p>
+          <!-- <dailog [name]="name" class="text-danger"></dailog>
+          <p #pRef class="text-danger"></p> -->
           <h3 class="text-center m-auto mb-2 mt-5 text-danger">List Products - KSBoy!!!</h3>
           <table class="table table-bordered border-primary ">
             <thead>
@@ -13,6 +13,7 @@
                 <th scope="col">Release date</th>
                 <th scope="col">Price</th>
                 <th scope="col">Star</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -25,6 +26,9 @@
                 
                 <td scope="row">
                    <app-star [rating]="pro.starRating"></app-star>
+                </td>
+                <td>
+                  <a routerLink="{{pro.productId}}" class="btn btn-info">Chi tiết</a>
                 </td>
               </tr>
             </tbody>
