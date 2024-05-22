@@ -4,7 +4,7 @@ import {HomeComponent} from "./page/home/home.component";
 import { ProductsComponent } from './page/products/products.component';
 import { StarComponent } from './page/star/star.component';
 import {ProductsDetailComponent} from './page/products/products-detail/products-detail.component'
-
+import {NotFoundComponent} from './page/not-found/not-found.component';
 const routes: Routes = [
   {
     path: '',
@@ -18,7 +18,7 @@ const routes: Routes = [
     //     path: ':id',
     //     component: ProductsDetailComponent,
     //   },
-    // ] 
+    // ]
   },
   {
     path: 'start',
@@ -27,6 +27,9 @@ const routes: Routes = [
   {
     path: 'products/:id',
     component: ProductsDetailComponent,
+  },
+  {
+    path: '**', component: NotFoundComponent
   }
 ];
 

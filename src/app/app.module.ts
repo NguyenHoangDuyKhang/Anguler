@@ -9,6 +9,7 @@ import { DialogComponent } from './page/products/dialog.component';
 import { ProductsDetailComponent } from './page/products/products-detail/products-detail.component';
 import { HeaderComponent } from './page/header/header.component';
 import { HomeComponent } from './page/home/home.component';
+import { NotFoundComponent } from './page/not-found/not-found.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HomeComponent } from './page/home/home.component';
     DialogComponent,
     ProductsDetailComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
