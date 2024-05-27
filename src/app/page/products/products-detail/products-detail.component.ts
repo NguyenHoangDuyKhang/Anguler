@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ProductsDetailComponent implements OnInit {
   constructor(private router: ActivatedRoute, private route:Router) {}
   result: any = [];
-  ngOnInit(): void {
+  ngOnInit(): void { 
     let id = this.router.snapshot.params.id;
     // console.log(id);
     let data = JSON.parse(localStorage.getItem('data') ?? '');
