@@ -12,7 +12,6 @@ export interface ILogin{
 })
 
 
-
 export class AuthService {
   url = 'https://knowledgehub.demopolyct.online/api/auth/login'
   loginForm!: ILogin;

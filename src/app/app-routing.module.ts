@@ -6,6 +6,9 @@ import { StarComponent } from './page/star/star.component';
 import {ProductsDetailComponent} from './page/products/products-detail/products-detail.component'
 import {NotFoundComponent} from './page/not-found/not-found.component';
 import {LoginComponent} from './auth/login/login.component';
+import {UnitComponent} from './page/unit/unit.component';
+// import {AddProductComponent} from './page/add-product/add-product.component';
+import {CreateComponent} from './page/unit/create/create.component';
 const routes: Routes = [
   {
     path: 'login',
@@ -35,6 +38,14 @@ const routes: Routes = [
   {
     path: 'products/:id',
     component: ProductsDetailComponent,
+  },
+  {
+    path: 'unit',
+    component: UnitComponent,
+  },
+  {
+    path: 'add-product',
+    component: CreateComponent,
   },
   {
     path: '**', component: NotFoundComponent

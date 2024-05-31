@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row col-lg-6 mx-auto mt-5 pt-5">
+        <form [formGroup]="postData" (ngSubmit)="submitForm()">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" formControlName="name">
+              <span class="text-danger"
+              *ngIf="postData.get('name')!.invalid && (postData.get('name')!.dirty || postData.get('name')!.touched)"
+              >Vui lòng nhập Tên</span>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">address</label>
+              <input type="text" id="address" class="form-control" name="address" [(ngModel)]="address" formControlName="address">
+              <span class="text-danger"
+              *ngIf="postData.get('address')!.invalid && (postData.get('address')!.dirty || postData.get('address')!.touched)"
+              >Vui lòng nhập địa chỉ</span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <textarea class="form-control"  id="description" name="description" [(ngModel)]="description" formControlName="description" rows="3"></textarea>
+                <span class="text-danger"
+              *ngIf="postData.get('description')!.invalid && (postData.get('description')!.dirty || postData.get('description')!.touched)"
+              >Vui lòng nhập mô tả</span>
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>

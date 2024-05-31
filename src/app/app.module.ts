@@ -14,6 +14,10 @@ import { LoginComponent } from './auth/login/login.component';
 // import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CreateComponent } from './page/unit/create/create.component';
+import { EditComponent } from './page/unit/edit/edit.component';
+import { DeleteComponent } from './page/unit/delete/delete.component';
+import { UnitComponent } from './page/unit/unit.component';
 
 
 
@@ -28,8 +32,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HomeComponent,
     NotFoundComponent,
     LoginComponent,
-    
-    
+    CreateComponent,
+    EditComponent,
+    DeleteComponent,
+    UnitComponent,
   ],
   imports: [
     BrowserModule,
