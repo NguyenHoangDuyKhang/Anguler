@@ -9,6 +9,7 @@ import {LoginComponent} from './auth/login/login.component';
 import {UnitComponent} from './page/unit/unit.component';
 // import {AddProductComponent} from './page/add-product/add-product.component';
 import {CreateComponent} from './page/unit/create/create.component';
+import { AuthGuard } from './@core/guards/auth.guaeds';
 const routes: Routes = [
   {
     path: 'login',
@@ -19,10 +20,12 @@ const routes: Routes = [
   },
   {
     path: 'home',
+    canActivate: [AuthGuard],
     component: HomeComponent
   },
   {
     path: 'products',
+    canActivate: [AuthGuard],
     component: ProductsComponent,
     // children: [
     //   {
@@ -37,14 +40,17 @@ const routes: Routes = [
   // },
   {
     path: 'products/:id',
+    canActivate: [AuthGuard],
     component: ProductsDetailComponent,
   },
   {
     path: 'unit',
+    canActivate: [AuthGuard],
     component: UnitComponent,
   },
   {
     path: 'add-product',
+    canActivate: [AuthGuard],
     component: CreateComponent,
   },
   {

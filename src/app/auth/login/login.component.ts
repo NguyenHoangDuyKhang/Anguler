@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')]),
+      email: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required, Validators.minLength(8)])
     })
   }
@@ -69,6 +69,7 @@ if (this.loginForm.valid) {
   }
 
   protected handleLoginSuccess(res: any) {
+    this.authService.setToken(res.token);
     alert("Hợp lý, cho zô")
     this.router.navigateByUrl('/home');
   }

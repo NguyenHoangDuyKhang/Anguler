@@ -54,7 +54,7 @@ export class UnitComponent implements OnInit {
         if (index !== -1) {
           this.listData.splice(index, 1); // Xóa phần tử khỏi mảng
         }
-      },
+      },    
       (error) => {
         console.log(error);
       }
@@ -63,7 +63,7 @@ export class UnitComponent implements OnInit {
 
 
   submitForm() {  
-    this.update( this.GetOne.id , this.GetOne);
+    this.update(this.GetOne.id , this.GetOne);
   }
 
 
