@@ -11,6 +11,10 @@ export class UnitComponent implements OnInit {
   listData: any;
   GetOne: any;
   selectedId: number | null = 0;
+
+  last_Page: number = 0;
+  cur_Page: number = 0;
+  API_URL:string = 'https://knowledgehub.demopolyct.online/api/unit';
   constructor(private unit: ServicePostService) {
   }
   units: any;
@@ -20,13 +24,16 @@ export class UnitComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllUnit();
-    this.getOneUnit(this.selectedId!);
   }
 
   getAllUnit() {
     this.unit.getAllPost().subscribe(
       (res) => {
         this.listData = res.data;
+        this.cur_Page = res.meta.current_page;
+        this.last_Page = res.meta.last_page;
+        console.log(this.cur_Page);
+        console.log(this.last_Page);
       },
       (error) => {
         console.log(error);
@@ -44,6 +51,10 @@ export class UnitComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+  getPage(res: any){
+    this.listData = res.data;
+    console.log(res);
   }
 
   deleteUnit(id: number) {

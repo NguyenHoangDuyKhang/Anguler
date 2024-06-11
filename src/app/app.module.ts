@@ -18,6 +18,7 @@ import { CreateComponent } from './page/unit/create/create.component';
 import { EditComponent } from './page/unit/edit/edit.component';
 import { DeleteComponent } from './page/unit/delete/delete.component';
 import { UnitComponent } from './page/unit/unit.component';
+import { PaginatorComponent } from './@theme/component/paginator/paginator.component';
 
 
 
@@ -36,6 +37,7 @@ import { UnitComponent } from './page/unit/unit.component';
     EditComponent,
     DeleteComponent,
     UnitComponent,
+    PaginatorComponent,
   ],
   imports: [
     BrowserModule,
